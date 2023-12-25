@@ -10,7 +10,7 @@ def index():
 
 @app.route('/telaprincipal')
 def telaprincipal():
-    return render_template('user.html')
+    return render_template('telaprincipal.html')
 
 @app.route('/user')
 def user():
@@ -51,9 +51,6 @@ def calendario():
 def enviar_email(destinatario, assunto, mensagem):
     remetente = 'financaflex@gmail.com'  # Substitua pelo seu e-mail
     senha = 'wlwy ozez twni fjhm'
-
-    if senha is None:
-        return "Erro: A variável de ambiente SENHA_EMAIL não está definida."
 
     try:
         server = smtplib.SMTP('smtp.gmail.com', 587)
