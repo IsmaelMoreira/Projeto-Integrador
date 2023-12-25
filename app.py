@@ -51,7 +51,8 @@ def calendario():
 def enviar_email(destinatario, assunto, mensagem):
     remetente = 'financaflex@gmail.com'  # Substitua pelo seu e-mail
     senha = 'wlwy ozez twni fjhm'
-
+    if senha is None:
+        return "Erro:"
     try:
         server = smtplib.SMTP('smtp.gmail.com', 587)
         server.starttls()
